@@ -2,7 +2,7 @@
   <h1>Heroes <small>Marvel y DC</small></h1>
   <hr />
   <div class="card-columns">
-    <div class="card" *ngFor="let hero of heroes">
+    <div class="card" *ngFor="let hero of heroes; let i = index">
       <div class="card-header">{{ hero.casa }}</div>
       <img [src]="hero.img" class="card-img-top" [alt]="hero.nombre" />
       <div class="card-body">
@@ -13,7 +13,14 @@
         <p class="card-text">
           <small class="text-muted">{{ hero.aparicion }}</small>
         </p>
-        <button class="btn btn-outline-primary btn-block">More...</button>
+        <button (click)="viewHero(i)" class="btn btn-outline-primary btn-block">
+          Btn More...
+        </button>
+        <a
+          [routerLink]="['/heroe', i]"
+          class="btn btn-outline-primary btn-block"
+          >A More...</a
+        >
       </div>
     </div>
   </div>
