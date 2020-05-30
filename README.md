@@ -1,3 +1,7 @@
+# Run demo
+
+[Demo online](https://spa-angular.now.sh/home) Build on Vercel.
+
 # Spa
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
