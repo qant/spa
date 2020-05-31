@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card mt-3 animated fadeIn fast">
     <h1 class="card-title text-center mt-3">
-      {{ hero.nombre }}
+      {{ hero.nombre | uppercase }}
     </h1>
     <div class="row">
       <div class="col-md-4">
@@ -19,17 +19,17 @@
           <img
             *ngIf="hero.casa.toLowerCase() === 'dc'"
             src="assets/img/dc-logo.jpg"
-            class="img-fluid"
+            class="img-logo"
             [alt]="hero.casa"
           />
           <img
             *ngIf="hero.casa.toLowerCase() === 'marvel'"
             src="assets/img/marvel-logo.png"
-            class="img-fluid"
+            class="img-logo"
             [alt]="hero.casa"
           />
           <p class="card-text">
-            <small class="text-muted">{{ hero.aparicion }}</small>
+            <small class="text-muted">{{ hero.aparicion | date: "y" }}</small>
           </p>
           <a
             [routerLink]="['/heroes']"
