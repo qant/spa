@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroesService } from './services/heroes.service';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { HeroCardComponent } from './components/hero-card/hero-card.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeroeComponent } from './components/heroe/heroe.component';
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
+    HeroCardComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [HeroesService],

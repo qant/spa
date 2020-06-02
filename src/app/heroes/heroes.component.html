@@ -2,26 +2,10 @@
   <h1>Heroes <small>Marvel y DC</small></h1>
   <hr />
   <div class="card-columns">
-    <div class="card" *ngFor="let hero of heroes; let i = index">
-      <div class="card-header">{{ hero.casa }}</div>
-      <img [src]="hero.img" class="card-img-top" [alt]="hero.nombre" />
-      <div class="card-body">
-        <h5 class="card-title animated fadeIn fast">{{ hero.nombre }}</h5>
-        <p class="card-text animated fadeIn fast">
-          {{ hero.bio }}
-        </p>
-        <p class="card-text">
-          <small class="text-muted">{{ hero.aparicion }}</small>
-        </p>
-        <button (click)="showHero(i)" class="btn btn-outline-primary btn-block">
-          Btn More...
-        </button>
-        <a
-          [routerLink]="['/heroe', i]"
-          class="btn btn-outline-primary btn-block"
-          >A More...</a
-        >
-      </div>
-    </div>
+    <app-hero-card
+      [hero]="heroFromComponent"
+      [index]="i"
+      *ngFor="let heroFromComponent of heroes; let i = index"
+    ></app-hero-card>
   </div>
 </div>
