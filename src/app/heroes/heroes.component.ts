@@ -19,8 +19,7 @@ export class HeroesComponent implements OnInit {
     console.log('HeroesComponent ngOnInit');
     console.log(this.heroes);
   }
-  showHero(i: string) {
+  showHero(i: number) {
     this.router.navigate(['/heroe', i]);
-    console.log(i);
   }
 }

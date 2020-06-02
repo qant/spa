@@ -5,6 +5,7 @@
     <app-hero-card
       [hero]="heroFromComponent"
       [index]="i"
+      (selectedHero)="showHero($event)"
       *ngFor="let heroFromComponent of heroes; let i = index"
     ></app-hero-card>
   </div>
